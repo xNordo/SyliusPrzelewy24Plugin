@@ -51,7 +51,7 @@ final class CaptureAction implements ActionInterface, ApiAwareInterface, Generic
 
     public function setGenericTokenFactory(GenericTokenFactoryInterface $genericTokenFactory = null): void
     {
-        $this->tokenFactory = $genericTokenFactory;
+        $this->tokenFactory = $genericTokenFactory; /** @phpstan-ignore-line */
     }
 
     public function execute($request): void

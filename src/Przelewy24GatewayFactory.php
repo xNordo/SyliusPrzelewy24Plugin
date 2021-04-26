@@ -39,7 +39,7 @@ final class Przelewy24GatewayFactory extends GatewayFactory
                 'merchant_id',
             ];
 
-            $config['payum.api'] = function (ArrayObject $config) {
+            $config['payum.api'] = function (ArrayObject $config) : array {
                 $config->validateNotEmpty($config['payum.required_options']);
 
                 return [

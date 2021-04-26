@@ -102,7 +102,7 @@ final class ConvertPaymentAction implements ActionInterface
 
         /** @var OrderItemInterface $item */
         foreach ($order->getItems() as $item) {
-            $shoppingList['p24_name_' . $index] = $item->getProduct()->getName();
+            $shoppingList['p24_name_' . $index] = $item->getProduct() !== null ? $item->getProduct()->getName() : null;
             $shoppingList['p24_quantity_' . $index] = $item->getQuantity();
             $shoppingList['p24_price_' . $index] = $item->getUnitPrice();
 
